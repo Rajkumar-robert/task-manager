@@ -52,3 +52,19 @@
   border-radius: 6px;
   cursor: pointer;
 }
+
+
+.view-btn, .edit-btn, .delete-btn , .comment-btn {
+  font-size: 0.85rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+}
+
+.view-btn { background: #3b82f6; color: white; }
+.edit-btn { background: #10b981; color: white; }
+.delete-btn { background: #ef4444; color: white; }
+.comment-btn { background: #6b7280; color: white; }
+

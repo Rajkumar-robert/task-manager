@@ -67,7 +67,7 @@ const Dashboard: React.FC = () => {
 
   if (loading) return (
     <div className="dashboard">
-      <Navbar user={user} onLogout={handleLogout} />
+      {/* <Navbar user={user} onLogout={handleLogout} /> */}
       <div className="dashboard-content">
         <div className="loading">Loading dashboard...</div>
       </div>
@@ -76,7 +76,7 @@ const Dashboard: React.FC = () => {
 
   if (error) return (
     <div className="dashboard">
-      <Navbar user={user} onLogout={handleLogout} />
+      {/* <Navbar user={user} onLogout={handleLogout} /> */}
       <div className="dashboard-content">
         <div className="error">Error: {error}</div>
       </div>
