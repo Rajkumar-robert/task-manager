@@ -37,7 +37,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       }
     }
 
-    setInitializing(false); // ✅ Prevents early redirect
+    setInitializing(false);
   }, []);
 
   const login = async (data: LoginData) => {

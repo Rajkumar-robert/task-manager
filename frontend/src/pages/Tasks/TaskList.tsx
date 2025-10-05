@@ -137,7 +137,7 @@ const TaskList: React.FC = () => {
     try {
       await fileAPI.delete(fileId);
       
-      // Remove file from local state
+  
       setTaskFiles(prev => ({
         ...prev,
         [taskId]: prev[taskId]?.filter(file => file._id !== fileId) || []
@@ -183,7 +183,7 @@ const TaskList: React.FC = () => {
       setExpandedTaskId(null);
     } else {
       setExpandedTaskId(taskId);
-      // Load files when expanding task
+      
       await fetchFilesForTask(taskId);
     }
   };

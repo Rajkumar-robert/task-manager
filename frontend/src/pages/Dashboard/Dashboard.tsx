@@ -39,7 +39,7 @@ const Dashboard: React.FC = () => {
     fetchAnalytics();
   }, []);
 
-  // Helper functions to get counts based on your API response
+  
   const getStatusCount = (status: string) => {
     if (!stats?.statusStats) return 0;
     const stat = stats.statusStats.find(s => s._id === status);

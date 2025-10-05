@@ -1,4 +1,3 @@
-// Types for File
 export interface File {
   _id: string;
   taskId: string;
