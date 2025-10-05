@@ -10,6 +10,9 @@ const connectDB = require('./config/db');
 connectDB();
 
 const authRoutes = require('./routes/authRoutes');
+const taskRoutes = require('./routes/taskRoutes');
+const commentsRoutes = require('./routes/commentRoutes');
+const fileRoutes = require('./routes/fileRoutes');
 
 const app = express();
 
@@ -21,6 +24,9 @@ app.use(morgan('dev'));
 app.use('/uploads',express.static(path.join(__dirname, '../uploads')));
 
 app.use('/api/auth', authRoutes);
+app.use('/api/tasks', taskRoutes);
+app.use('/api/comments', commentsRoutes);
+app.use('/api/files', fileRoutes);
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', time: new Date().toISOString() });
