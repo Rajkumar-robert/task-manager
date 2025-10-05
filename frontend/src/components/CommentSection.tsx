@@ -68,8 +68,8 @@ const CommentSection: React.FC<CommentSectionProps> = ({ taskId }) => {
                   onChange={e => setEditText(e.target.value)}
                 />
                 <div className="comment-actions">
-                  <button onClick={() => handleUpdate(c._id)}>Save</button>
-                  <button onClick={() => setEditingId(null)}>Cancel</button>
+                  <button onClick={() => handleUpdate(c._id)} className="edit-btn">Save</button>
+                  <button onClick={() => setEditingId(null)} className="delete-btn">Cancel</button>
                 </div>
               </>
             ) : (
@@ -78,8 +78,9 @@ const CommentSection: React.FC<CommentSectionProps> = ({ taskId }) => {
 
             {c.createdBy === user?.id && editingId !== c._id && (
               <div className="comment-actions">
-                <button onClick={() => handleEdit(c)}>Edit</button>
-                <button onClick={() => handleDelete(c._id)}>Delete</button>
+                
+                <button onClick={() => handleEdit(c)} className="edit-btn">Edit</button>
+                <button onClick={() => handleDelete(c._id)} className="delete-btn">Delete</button>
               </div>
             )}
           </li>
